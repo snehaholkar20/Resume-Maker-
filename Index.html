@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!--left side:Editor-->
+        <section class="editor">
+            <h2>Resume Information</h2>
+               
+               <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="input-name" placeholder="e.g john Doe">
+                </div>
+                <div class="form-group">
+                    <label>Job Title</label>
+                    <input type="text" id="input-job" placeholder="e.g Software Engineer">
+                </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="input-email" placeholder="e.g john@example.com">
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="input-phone" placeholder="e.g +1 (123) 456-7890">
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" id="input-address" placeholder="e.g 123 Main St, City, Country">
+            </div>
+            <div class="form-group">
+                <label>LinkedIn</label>
+                <input type="text" id="input-linkedin" placeholder="e.g linkedin.com/in/yourname">
+            </div>
+            <div class="form-group">
+                <label>GitHub</label>
+                <input type="text" id="input-github" placeholder="e.g github.com/yourname">
+            </div>
+            <div class="form-group">
+                <label>Certifications</label>
+                <textarea id="input-certifications" placeholder="List your certifications..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Profile</label>
+                <textarea id="input-Profile" placeholder="Write a brief summary about yourself..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Education</label>
+                <textarea id="input-education" placeholder="List your educational background..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Skills</label>
+                <textarea id="input-skills" placeholder="List your skills..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Experience</label>
+                <textarea id="input-experience" placeholder="Describe your work experience..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Projects</label>
+                <textarea id="input-projects" placeholder="Describe your projects..."></textarea>
+            </div>
+
+            <!--ADD This Button-->
+            <button id="download-btn" class="btn-download">Download Resume as PDF</button>
+
+            <!--Required for Pdf-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+        </section>
+
+        <section class="preview">
+            <h2>Resume Preview</h2>
+            <div class="resume-paper" id="resume-paper">
+                <h1 id="preview-name">Your Name</h1>
+                <p id="preview-job" style="font-size: 1.2rem;color:#666;">Your Job Title</p>
+                <p id="preview-email">Your Email</p>
+                <p id="preview-phone">Your Phone Number</p>
+                <p id="preview-address">Your Address</p>
+                <h3>Social Links</h3>
+                <p id="preview-linkedin">Your LinkedIn</p>
+                <p id="preview-github">Your GitHub</p>
+                <h3>Certifications</h3>       
+                <p id="preview-certifications">Your Certifications</p>
+                <h3>Profile</h3>
+                <p id="preview-profile">Your Profile Summary</p>
+                <h3>Education</h3>
+                <p id="preview-education">Your Education Details</p>
+                <h3>Skills</h3>
+                <p id="preview-skills">Your Skills</p>
+                <h3>Experience</h3>
+                <p id="preview-experience">Your Work Experience</p>
+                <h3>Projects</h3>
+                <p id="preview-projects">Your Projects</p>
+
+            </div>
+        </section>
+    </div>
+        <script src="script.js"></script>
+</body>
+</html>

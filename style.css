@@ -1,0 +1,187 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* ── App Layout ── */
+.app-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* ── Editor (Left Side) ── */
+.editor {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 2px solid #ddd;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.editor h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 8px;
+}
+
+/* ── Form Groups ── */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.9rem;
+    transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* ── Download Button ── */
+.btn-download {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #218838;
+}
+
+/* ── Preview (Right Side) ── */
+.preview {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #444;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.preview h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* ── Resume Paper ── */
+.resume-paper {
+    width: 100%;
+    max-width: 620px;
+    min-height: 800px;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+/* ── Resume Header ── */
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.resume-header h1 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.job-title {
+    font-size: 1.1rem;
+    color: #28a745;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.82rem;
+    color: #555;
+    margin-top: 6px;
+}
+
+/* ── Resume Sections ── */
+.resume-section {
+    margin-bottom: 18px;
+}
+
+.resume-section h3 {
+    font-size: 1rem;
+    color: #28a745;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+}
+
+.resume-section p {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+/* ── Print Media ── */
+@media print {
+    .editor,
+    .btn-download {
+        display: none;
+    }
+    .app-container {
+        display: block;
+    }
+    .preview {
+        padding: 0;
+        background: white;
+    }
+    .resume-paper {
+        box-shadow: none;
+        border: none;
+    }
+}
